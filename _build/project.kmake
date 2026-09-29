@@ -1,0 +1,46 @@
+#version 1.0
+
+#references
+name_bin: lua
+
+#global
+compilerlauncher: ccache
+compiler: clang
+standard: c17
+binarytype: static
+sources: "src/onelua.c"
+headers: "include"
+defines: MAKE_LIB
+warninglevel: normal
+
+#profile debug-windows
+binaryname: ${name_bin}d
+buildtype: debug
+buildpath: "debug"
+
+#profile release-windows
+binaryname: ${name_bin}
+buildtype: minsizerel
+buildpath: "release"
+
+#profile debug-windows-gnu
+targettype: windows-gnu
+binaryname: ${name_bin}-gnud
+buildtype: debug
+buildpath: "debug"
+
+#profile release-windows-gnu
+targettype: windows-gnu
+binaryname: ${name_bin}-gnu
+buildtype: minsizerel
+buildpath: "release"
+
+#profile debug-linux
+binaryname: lib${name_bin}d
+buildtype: debug
+buildpath: "debug"
+
+#profile release-linux
+binaryname: lib${name_bin}
+buildtype: minsizerel
+buildpath: "release"
