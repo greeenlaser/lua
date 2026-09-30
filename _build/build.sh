@@ -82,7 +82,8 @@ done
 # Compile
 #
 
-kalamake ${BUILD_RELEASE} && kalamake ${BUILD_DEBUG}
+kalamake ${BUILD_RELEASE} || exit 1
+kalamake ${BUILD_DEBUG} || exit 1
 
 #
 # Cleanup
