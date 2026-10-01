@@ -2,6 +2,8 @@
 
 #references
 name_bin: lua
+dir_release: release-
+dir_debug: debug-
 
 #global
 compilerlauncher: ccache
@@ -16,31 +18,31 @@ warninglevel: normal
 #profile debug-windows
 binaryname: ${name_bin}d
 buildtype: debug
-buildpath: "debug"
+buildpath: "${dir_debug}windows"
 
 #profile release-windows
 binaryname: ${name_bin}
 buildtype: minsizerel
-buildpath: "release"
+buildpath: "${dir_release}windows"
 
 #profile debug-windows-gnu
 targettype: windows-gnu
 binaryname: ${name_bin}-gnud
 buildtype: debug
-buildpath: "debug"
+buildpath: "${dir_debug}windows-gnu"
 
 #profile release-windows-gnu
 targettype: windows-gnu
 binaryname: ${name_bin}-gnu
 buildtype: minsizerel
-buildpath: "release"
+buildpath: "${dir_release}windows-gnu"
 
 #profile debug-linux
 binaryname: lib${name_bin}d
 buildtype: debug
-buildpath: "debug"
+buildpath: "${dir_debug}linux"
 
 #profile release-linux
 binaryname: lib${name_bin}
 buildtype: minsizerel
-buildpath: "release"
+buildpath: "${dir_release}linux"
