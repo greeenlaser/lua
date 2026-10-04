@@ -2,8 +2,8 @@
 
 #references
 name_bin: lua
-dir_release: release-
-dir_debug: debug-
+dir_release: build/temp/release-
+dir_debug: build/temp/debug-
 
 #global
 compilerlauncher: ccache

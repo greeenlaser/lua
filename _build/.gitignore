@@ -1,11 +1,5 @@
 # Built and copied files
 
-release*/
-debug*/
-
+build/
 src/
 include/
-
-LICENSE*
-License*
-license*
